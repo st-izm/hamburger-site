@@ -1,0 +1,616 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*右側にはみ出した部分まで横スクロールバーが表示される問題を解消するための記述*/
+html {
+  overflow: auto;
+  font-size: 10px;
+}
+
+body {
+  overflow: hidden;
+}
+
+/*横スクロールバー問題解消ここまで*/
+img {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header
+   ----------------------------------------------------------------- */
+/* SideMenu
+   ----------------------------------------------------------------- */
+/* Main
+   ----------------------------------------------------------------- */
+/* Footer
+   ----------------------------------------------------------------- */
+/*
+カラーを変数として一括定義している。
+共通レイアウトのヘッダー、サイドメニュー、フッターを先に記述し、
+続いてその他をhtmlファイル別に記述する。
+*/
+/*
+index.html -------------------------------------------------------
+*/
+/*
+archive.html -------------------------------------------------------
+*/
+.l-footer {
+  height: 150px;
+  max-width: 100%;
+  text-align: center;
+  background-image: url("./image/footer_image.png");
+  background-size: cover;
+}
+
+.l-footer__sitemap {
+  padding: 40px 0;
+}
+
+.l-footer__sitemap a {
+  font-size: 1.0rem;
+  text-decoration: none;
+  color: white;
+}
+
+.l-footer small {
+  color: white;
+  font-size: .9rem;
+}
+
+.l-header {
+  position: relative;
+  height: 210px;
+  line-height: 210px;
+  width: 100%;
+  background-color: #FFF7EF;
+  display: inline-block;
+}
+
+@media screen and (max-width: 960px) {
+  .l-header {
+    height: 217px;
+    line-height: normal;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.l-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.l-main__left {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+
+@media screen and (max-width: 960px) {
+  .l-main__left {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.l-main__front-page-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .l-main__front-page-contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#l-main__fadeLayer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.8;
+  visibility: hidden;
+  z-index: 9;
+}
+
+@media screen and (max-width: 960px) {
+  #l-main__fadeLayer {
+    visibility: hidden;
+  }
+}
+
+.l-sideMenu {
+  position: relative;
+  width: 20%;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  /*footerの手前までsideMenuの領域を伸ばすため*/
+  padding-top: 82px;
+  padding-left: 3%;
+  background-color: #F2EDE9;
+}
+
+@media screen and (max-width: 960px) {
+  .l-sideMenu {
+    width: 350px;
+    padding-left: 5%;
+    position: absolute;
+    top: 0;
+    right: -350px;
+    z-index: 10;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .l-sideMenu {
+    width: 250px;
+  }
+}
+
+.l-sideMenu span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 5.0rem;
+  color: #707070;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .l-sideMenu span {
+    display: block;
+  }
+}
+
+.l-sideMenu div {
+  margin-top: 85px;
+}
+
+.l-sideMenu.is-open {
+  display: block;
+  right: 0px;
+}
+
+.c-search {
+  float: right;
+  margin-right: 5.0%;
+}
+
+@media screen and (max-width: 960px) {
+  .c-search {
+    margin-right: 0%;
+  }
+}
+
+.c-search__textArea {
+  width: 14vw;
+  height: 30px;
+  margin-right: 14px;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+@media screen and (max-width: 960px) {
+  .c-search__textArea {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-search__textArea {
+    width: 65%;
+  }
+}
+
+.c-search__icon {
+  color: #707070;
+}
+
+.c-search__button {
+  height: 30px;
+  width: 7vw;
+  border-radius: 5px;
+  border: 1px solid #707070;
+  font-size: 12px;
+  color: #707070;
+  background-color: #F2EDE9;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .c-search__button {
+    width: 15%;
+  }
+}
+
+.c-titles {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* Header
+   ----------------------------------------------------------------- */
+  /* SideMenu
+      ----------------------------------------------------------------- */
+  /* Main
+   ----------------------------------------------------------------- */
+}
+
+.c-titles--header {
+  margin-left: 4.0%;
+  float: left;
+  font-size: 6.5rem;
+  color: #707070;
+}
+
+@media screen and (max-width: 960px) {
+  .c-titles--header {
+    font-size: 5.3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-titles--header {
+    font-size: 4.0rem;
+  }
+}
+
+.c-titles--sideMenu {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 26px;
+  font-size: 3.2rem;
+  color: #707070;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .c-titles--sideMenu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-titles--sideMenu {
+    font-size: 1.8rem;
+    top: 14px;
+    right: 15px;
+  }
+}
+
+.c-titles--menuTop {
+  font-size: 3.3rem;
+  color: #707070;
+}
+
+@media screen and (max-width: 960px) {
+  .c-titles--menuTop {
+    display: none;
+  }
+}
+
+.c-titles--mainTop {
+  margin-left: 5%;
+  font-size: 3.0rem;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .c-titles--mainTop {
+    font-size: 2.0rem;
+  }
+}
+
+.c-titles--front-page-card {
+  margin: 3% 0 5% 5%;
+  font-size: 5.0rem;
+  color: white;
+}
+
+.c-titles--archiveTop {
+  margin-left: 5%;
+  font-size: 2.0rem;
+  color: white;
+}
+
+.c-titles--archiveTop span {
+  font-size: 3.0rem;
+  font-weight: bold;
+}
+
+.p-archiveHeading {
+  width: 100%;
+  height: 283px;
+  line-height: 283px;
+  background-image: url(../image/archiveHeading_image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.p-archiveHeading__mask {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 600px) {
+  .p-archiveHeading {
+    height: 200px;
+    line-height: 200px;
+  }
+}
+
+.p-front-page-card {
+  max-width: 47%;
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .p-front-page-card {
+    max-width: 100%;
+    height: 630px;
+    margin: 8px 0;
+  }
+}
+
+.p-front-page-card hr {
+  margin-left: 5%;
+  width: 10%;
+  border-width: .2rem;
+  border-color: white;
+}
+
+.p-front-page-card1 {
+  background-image: url(../image/frontpage_card1.png);
+}
+
+.p-front-page-card2 {
+  background-image: url(../image/frontpage_card2.png);
+}
+
+.p-front-page-card__explanation__text {
+  margin: auto auto 3% auto;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.p-front-page-card__explanation__text h3 {
+  padding: 3%;
+  font-size: 2.5rem;
+  color: #3C2A10;
+}
+
+.p-front-page-card__explanation__text p {
+  padding: 3%;
+  font-size: 1.5rem;
+  color: #3C2A10;
+}
+
+.p-headWrapper {
+  width: 100%;
+  line-height: 28vw;
+  background-image: url(../image/frontpage_image.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.p-mapWrapper {
+  max-width: 100%;
+  height: 500px;
+  background-image: url(../image/frontpage_map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 960px) {
+  .p-mapWrapper {
+    height: auto;
+  }
+}
+
+.p-mapWrapper__text {
+  height: 100%;
+  width: 60%;
+  padding: 5% 8%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.p-mapWrapper__text div {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.p-mapWrapper__text hr {
+  width: 6.0rem;
+  margin: 8% 0;
+  border-width: .2rem;
+  border-color: white;
+}
+
+.p-mapWrapper__text p {
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .p-mapWrapper__text {
+    width: 100%;
+  }
+  .p-mapWrapper__text hr {
+    margin: 3% 0;
+  }
+  .p-mapWrapper__text p {
+    line-height: 2.7rem;
+  }
+}
+
+.p-menu {
+  list-style-type: none;
+}
+
+.p-menu .p-menu__food li {
+  margin: 40px 0 40px 0;
+  font-size: 1.5rem;
+  color: #707070;
+}
+
+.p-menu .p-menu__food li .p-menu__food__items {
+  margin-top: 30px;
+}
+
+.p-menu .p-menu__food li .p-menu__food__items li {
+  margin: 12px 0 12px 14px;
+}
+/*# sourceMappingURL=style.css.map */

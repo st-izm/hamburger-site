@@ -1,0 +1,17 @@
+
+.p-menu {
+    list-style-type: none;
+    .p-menu__food {
+        li {
+            margin: 40px 0 40px 0;
+            font-size: 1.5rem;
+            color: $gray;
+            .p-menu__food__items {
+                margin-top: 30px;
+                li {
+                    margin: 12px 0 12px 14px;
+                }
+            }
+        }
+    }
+}

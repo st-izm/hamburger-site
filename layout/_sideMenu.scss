@@ -1,0 +1,44 @@
+$sideMenu-bkg-color: #F2EDE9;
+
+.l-sideMenu {
+    position: relative;
+    width: 20%;
+    align-self: stretch; /*footerの手前までsideMenuの領域を伸ばすため*/
+    padding-top: 82px;
+    padding-left: 3%;
+    background-color: $sideMenu-bkg-color;
+    // transition: all 3s;
+
+    @include tab {
+        width: 350px;
+        padding-left: 5%;
+        position: absolute;
+        top: 0;
+        right: -350px;
+        z-index: 10;
+        display: none;
+    }
+    @include sp {
+        width: 250px;
+    }
+    span {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 5.0rem;
+        color: $gray;
+        cursor: pointer;
+        display: none;
+        @include tab {
+            display: block;
+        }
+    }
+    div {
+        margin-top: 85px;
+    }
+    &.is-open {
+        display: block;
+        right: 0px;
+        // transform: translateX(-350px);
+    }
+}

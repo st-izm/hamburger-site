@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <meta name="description" content="ページの内容を表す文章///ハンバーガー屋さんのサイトです" />
+    <title>Hamburger</title>
+</head>
+
+<body>
+<div id="l-main__fadeLayer"></div> <!--サイドメニューopen時暗くするフェード -->
+<main class="l-main">
+    <div class="l-main__left">
+        <!-- Header Start -->
+        <header class="l-header">
+            <h1 class="c-titles c-titles--header" href="#">Hamburger</h1>
+            <div class="c-search">
+                <input type="text" name="search" class="c-search__textArea" placeholder="&#xF002;" style="font-family:Arial, FontAwesome">
+                <input type="button" name="button" class="c-search__button" value="検索">
+            </div>
+            <h2 id="menu" class="c-titles c-titles--sideMenu">Menu</h2>
+        </header>
+        <!-- Header  End-->
+
+        <div class="p-archiveHeading">
+            <div class="p-archiveHeading__mask">
+                <a class="c-titles--archiveTop"><span>Menu：</span>チーズバーガー</a>
+            </div>
+        </div>
+        <div class="l-main__archiveTop">
+            <h2>小見出しが入ります</h2>
+            <p>テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊
+                ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキ
+                ストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊りま
+                す。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキスト
+                が⼊ります。テキストが⼊ります。
+            </p>
+        </div>
+        <div class="p-archive-cards">
+            <div class="p-archive-card p-archive-card1">
+                <div> <!--image Flexbox-->
+
+                </div>
+                <div>
+                    <h3>チーズバーガー</h3>
+                    <h4>小見出しが入ります</h4>
+                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキ
+                        ストが入ります。テキストが入ります。テキストが入ります。
+                    </p>
+                    <div class="c-button">
+                        <p>詳しく見る</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="p-mapWrapper"> <!--mapWrapper-->
+            <div class="p-mapWrapper__text"> <!--gray-->
+                <div class="p-mapWrapper__text--title">
+                    見出しが入ります
+                </div>
+                <hr>
+                <p> テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊
+                    ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキ
+                    ストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊りま
+                    す。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキスト
+                    が⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。
+                    テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊
+                    ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。</p>
+            </div>
+        </div>
+    </div>
+    <!--sideMenu (sidebar)-->
+    <div class="l-sideMenu">
+        <span id="close">×</span>
+        <h2 class="c-titles c-titles--menuTop">
+            Menu
+        </h2>
+        <div class="p-menu">
+            <ul class="p-menu__food">
+                <li>
+                    バーガー
+                    <ul class="p-menu__food__items">
+                        <li>ハンバーガー</li>
+                        <li>チーズバーガー</li>
+                        <li>テリヤキバーガー</li>
+                        <li>アボカドバーガー</li>
+                        <li>フィッシュバーガー</li>
+                        <li>ベーコンバーガー</li>
+                        <li>チキンバーガー</li>
+                    </ul>
+                </li>
+                <li>
+                    サイド
+                    <ul class="p-menu__food__items">
+                        <li>ポテト</li>
+                        <li>サラダ</li>
+                        <li>ナゲット</li>
+                        <li>コーン</li>
+                    </ul>
+                </li>
+                <li>
+                    ドリンク
+                    <ul class="p-menu__food__items">
+                        <li>コーラ</li>
+                        <li>ファンタ</li>
+                        <li>オレンジ</li>
+                        <li>アップル</li>
+                        <li>紅茶（Ice/Hot）</li>
+                        <li>コーヒー（Ice/Hot）</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- sideMenu End -->
+</main>
+<!-- main End -->
+
+<!-- Footer  Start-->
+<footer class="l-footer">
+    <div class="l-footer__sitemap">
+        <a href="#">ショップ情報</a>
+        <a>|</a>
+        <a href="#">ヒストリー</a>
+    </div>
+    <small>Copyright: RaiseTech</small>
+</footer>
+<!-- Footer  End-->
+<script src="script.js"></script> <!--jQuery-->
+</body>
+</html>
