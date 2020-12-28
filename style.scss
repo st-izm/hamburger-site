@@ -2,20 +2,20 @@
 // Foundation
 // ==========================================================================
 
-@import "foundation/_reset";
-@import "foundation/_base";
-@import "foundation/_color";
-@import "foundation/_mixin";
-@import "foundation/_var";
+@import "scss/foundation/_reset";
+@import "scss/foundation/_base";
+@import "scss/foundation/_color";
+@import "scss/foundation/_mixin";
+@import "scss/foundation/_var";
 
 // ==========================================================================
 // Layout
 // ==========================================================================
 
-@import "layout/_footer";
-@import "layout/_header";
-@import "layout/_main";
-@import "layout/_sideMenu";
+@import "scss/layout/_footer";
+@import "scss/layout/_header";
+@import "scss/layout/_main";
+@import "scss/layout/_sideMenu";
 
 // ==========================================================================
 // Object
@@ -25,21 +25,27 @@
 // Component
 // -----------------------------------------------------------------
 
-@import "object/component/_button";
-@import "object/component/_search";
-@import "object/component/_titles";
+@import "scss/object/component/_button";
+@import "scss/object/component/_search";
+@import "scss/object/component/_titles";
 // @import "object/component/_media";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
 
-@import "object/project/_archiveHeading";
-@import "object/project/_front-page-card";
-@import "object/project/_headWrapper";
-@import "object/project/_mapWrapper";
-@import "object/project/_menu";
-@import "object/project/_middleWrapper";
+@import "scss/object/project/_mainVisual";
+@import "scss/object/project/_map";
+@import "scss/object/project/_menu";
+
+// -----------------------------------------------------------------
+// front
+
+@import "scss/object/project/front/_front-page-card";
+
+// -----------------------------------------------------------------
+// archive
+@import "scss/object/project/archive/_archiveHeading";
 
 // -----------------------------------------------------------------
 // Utility

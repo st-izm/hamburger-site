@@ -101,6 +101,18 @@ input, select {
   vertical-align: middle;
 }
 
+/* ボタンタグの装飾を消すための追記 */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -148,16 +160,27 @@ archive.html -------------------------------------------------------
   height: 150px;
   max-width: 100%;
   text-align: center;
-  background-image: url("./image/footer_image.png");
+  background-image: url(../image/footer_image.png);
   background-size: cover;
 }
 
 .l-footer__sitemap {
   padding: 40px 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.l-footer__sitemap li {
+  font-size: 1.0rem;
 }
 
 .l-footer__sitemap a {
-  font-size: 1.0rem;
+  padding: 5px;
   text-decoration: none;
   color: white;
 }
@@ -238,7 +261,7 @@ archive.html -------------------------------------------------------
   }
 }
 
-#l-main__fadeLayer {
+.js-fade-layer {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -251,7 +274,7 @@ archive.html -------------------------------------------------------
 }
 
 @media screen and (max-width: 960px) {
-  #l-main__fadeLayer {
+  .js-fade-layer {
     visibility: hidden;
   }
 }
@@ -286,7 +309,7 @@ archive.html -------------------------------------------------------
   }
 }
 
-.l-sideMenu span {
+.l-sideMenu .js-close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -297,18 +320,39 @@ archive.html -------------------------------------------------------
 }
 
 @media screen and (max-width: 960px) {
-  .l-sideMenu span {
+  .l-sideMenu .js-close {
     display: block;
   }
-}
-
-.l-sideMenu div {
-  margin-top: 85px;
 }
 
 .l-sideMenu.is-open {
   display: block;
   right: 0px;
+}
+
+.c-button--sideMenu {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 26px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #707070;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .c-button--sideMenu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-button--sideMenu {
+    font-size: 1.8rem;
+    top: 14px;
+    right: 15px;
+  }
 }
 
 .c-search {
@@ -392,30 +436,6 @@ archive.html -------------------------------------------------------
   }
 }
 
-.c-titles--sideMenu {
-  display: none;
-  position: absolute;
-  top: 18px;
-  right: 26px;
-  font-size: 3.2rem;
-  color: #707070;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 960px) {
-  .c-titles--sideMenu {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .c-titles--sideMenu {
-    font-size: 1.8rem;
-    top: 14px;
-    right: 15px;
-  }
-}
-
 .c-titles--menuTop {
   font-size: 3.3rem;
   color: #707070;
@@ -456,26 +476,101 @@ archive.html -------------------------------------------------------
   font-weight: bold;
 }
 
-.p-archiveHeading {
+.p-mainVisual {
   width: 100%;
-  height: 283px;
-  line-height: 283px;
-  background-image: url(../image/archiveHeading_image.png);
+  line-height: 28vw;
+  background-image: url(../image/frontpage/frontpage_image.png);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: 100%;
 }
 
-.p-archiveHeading__mask {
-  height: 100%;
+.p-map {
+  max-width: 100%;
+  height: 500px;
+  background-image: url(../image/map_image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (max-width: 600px) {
-  .p-archiveHeading {
-    height: 200px;
-    line-height: 200px;
+@media screen and (max-width: 960px) {
+  .p-map {
+    height: auto;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .p-map {
+    height: 650px;
+  }
+}
+
+.p-map__description {
+  height: 100%;
+  width: 60%;
+  padding: 5% 8%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.p-map__description__title {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.p-map__description hr {
+  width: 6.0rem;
+  margin: 8% 0;
+  border-width: .2rem;
+  border-color: white;
+}
+
+.p-map__description__text {
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .p-map__description {
+    width: 100%;
+  }
+  .p-map__description hr {
+    margin: 3% 0;
+  }
+  .p-map__description p {
+    line-height: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-map__description {
+    height: 50%;
+  }
+}
+
+.p-menu {
+  list-style-type: none;
+}
+
+.p-menu__food li {
+  margin: 40px 0 40px 0;
+}
+
+.p-menu__food li h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #707070;
+}
+
+/* ＆で中に入れたら効かなかったので、別途下記している */
+.p-menu__food__items {
+  margin-top: 30px;
+}
+
+.p-menu__food__items li {
+  margin: 12px 0 12px 14px;
+  font-size: 1.5rem;
+  color: #707070;
 }
 
 .p-front-page-card {
@@ -511,11 +606,11 @@ archive.html -------------------------------------------------------
 }
 
 .p-front-page-card1 {
-  background-image: url(../image/frontpage_card1.png);
+  background-image: url(../image/frontpage/frontpage_card1.png);
 }
 
 .p-front-page-card2 {
-  background-image: url(../image/frontpage_card2.png);
+  background-image: url(../image/frontpage/frontpage_card2.png);
 }
 
 .p-front-page-card__explanation__text {
@@ -524,93 +619,38 @@ archive.html -------------------------------------------------------
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.p-front-page-card__explanation__text h3 {
+.p-front-page-card__explanation__text dl dt {
   padding: 3%;
   font-size: 2.5rem;
+  font-weight: bold;
   color: #3C2A10;
 }
 
-.p-front-page-card__explanation__text p {
+.p-front-page-card__explanation__text dl dd {
   padding: 3%;
   font-size: 1.5rem;
   color: #3C2A10;
 }
 
-.p-headWrapper {
+.p-archiveHeading {
   width: 100%;
-  line-height: 28vw;
-  background-image: url(../image/frontpage_image.png);
+  height: 283px;
+  line-height: 283px;
+  background-image: url(../image/archiveHeading_image.png);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: 100%;
 }
 
-.p-mapWrapper {
-  max-width: 100%;
-  height: 500px;
-  background-image: url(../image/frontpage_map.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+.p-archiveHeading__mask {
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (max-width: 960px) {
-  .p-mapWrapper {
-    height: auto;
+@media screen and (max-width: 600px) {
+  .p-archiveHeading {
+    height: 200px;
+    line-height: 200px;
   }
-}
-
-.p-mapWrapper__text {
-  height: 100%;
-  width: 60%;
-  padding: 5% 8%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.p-mapWrapper__text div {
-  font-size: 2.5rem;
-  color: white;
-}
-
-.p-mapWrapper__text hr {
-  width: 6.0rem;
-  margin: 8% 0;
-  border-width: .2rem;
-  border-color: white;
-}
-
-.p-mapWrapper__text p {
-  font-size: 1.1rem;
-  line-height: 2.2rem;
-  color: white;
-}
-
-@media screen and (max-width: 960px) {
-  .p-mapWrapper__text {
-    width: 100%;
-  }
-  .p-mapWrapper__text hr {
-    margin: 3% 0;
-  }
-  .p-mapWrapper__text p {
-    line-height: 2.7rem;
-  }
-}
-
-.p-menu {
-  list-style-type: none;
-}
-
-.p-menu .p-menu__food li {
-  margin: 40px 0 40px 0;
-  font-size: 1.5rem;
-  color: #707070;
-}
-
-.p-menu .p-menu__food li .p-menu__food__items {
-  margin-top: 30px;
-}
-
-.p-menu .p-menu__food li .p-menu__food__items li {
-  margin: 12px 0 12px 14px;
 }
 /*# sourceMappingURL=style.css.map */

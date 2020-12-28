@@ -17,27 +17,10 @@
       }
    }
 
-   &--sideMenu {
-          display: none;
-          position: absolute;
-          top: 18px;
-          right: 26px;
-          font-size: 3.2rem;
-          color: $gray;
-          cursor: pointer;
-          @include tab {
-             display: block;
-          }
-          @include sp {
-             font-size: 1.8rem;
-             top: 14px;
-             right: 15px;
-          }
-      }
+   
 
    /* SideMenu
       ----------------------------------------------------------------- */
-
    &--menuTop {
       font-size: 3.3rem;
       color: $gray;

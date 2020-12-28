@@ -7,7 +7,6 @@ $sideMenu-bkg-color: #F2EDE9;
     padding-top: 82px;
     padding-left: 3%;
     background-color: $sideMenu-bkg-color;
-    // transition: all 3s;
 
     @include tab {
         width: 350px;
@@ -21,7 +20,7 @@ $sideMenu-bkg-color: #F2EDE9;
     @include sp {
         width: 250px;
     }
-    span {
+    .js-close {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -33,12 +32,8 @@ $sideMenu-bkg-color: #F2EDE9;
             display: block;
         }
     }
-    div {
-        margin-top: 85px;
-    }
     &.is-open {
         display: block;
         right: 0px;
-        // transform: translateX(-350px);
     }
 }

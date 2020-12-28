@@ -2,12 +2,18 @@
     height: 150px;
     max-width: 100%;
     text-align: center;
-    background-image: url("./image/footer_image.png");
+    background-image: url(../image/footer_image.png);
     background-size: cover;
     &__sitemap {
         padding: 40px 0;
-        a {
+        color: $footer-text;
+        display: flex;
+        justify-content: center;
+        li {
             font-size: 1.0rem;
+        }
+        a {
+            padding: 5px;
             text-decoration: none;
             color: $footer-text;
         }

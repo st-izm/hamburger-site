@@ -8,18 +8,18 @@
         }; 
     }
     &__front-page-contents {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 5%;
-            @include sp {
-                flex-direction: column;
-            }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5%;
+        @include sp {
+            flex-direction: column;
+        }
     }
 }
 
 // サイドメニュー開閉時のフェード用設定
-#l-main__fadeLayer {
+.js-fade-layer {
     position: absolute;
     top: 0px;
     left: 0px;
