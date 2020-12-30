@@ -32,6 +32,6 @@
     visibility: hidden;
     z-index: 9;
     @media screen and (max-width: 960px) {
-        visibility: hidden;
+        visibility: hidden; // メニューopen時にvisibleに変えるプロパティ
     }
 }

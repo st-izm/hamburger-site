@@ -1,7 +1,7 @@
 .c-button {
     &--sideMenu {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 18px;
         right: 26px;
         font-size: 3.2rem;

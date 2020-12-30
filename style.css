@@ -288,18 +288,21 @@ archive.html -------------------------------------------------------
   /*footerの手前までsideMenuの領域を伸ばすため*/
   padding-top: 82px;
   padding-left: 3%;
+  padding-bottom: 300px;
   background-color: #F2EDE9;
 }
 
 @media screen and (max-width: 960px) {
   .l-sideMenu {
     width: 350px;
+    height: 100%;
     padding-left: 5%;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -350px;
     z-index: 10;
     display: none;
+    overflow-y: scroll;
   }
 }
 
@@ -310,7 +313,7 @@ archive.html -------------------------------------------------------
 }
 
 .l-sideMenu .js-close {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   font-size: 5.0rem;
@@ -332,7 +335,7 @@ archive.html -------------------------------------------------------
 
 .c-button--sideMenu {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 18px;
   right: 26px;
   font-size: 3.2rem;
@@ -352,58 +355,6 @@ archive.html -------------------------------------------------------
     font-size: 1.8rem;
     top: 14px;
     right: 15px;
-  }
-}
-
-.c-search {
-  float: right;
-  margin-right: 5.0%;
-}
-
-@media screen and (max-width: 960px) {
-  .c-search {
-    margin-right: 0%;
-  }
-}
-
-.c-search__textArea {
-  width: 14vw;
-  height: 30px;
-  margin-right: 14px;
-  border-radius: 5px;
-  border: 1px solid #707070;
-}
-
-@media screen and (max-width: 960px) {
-  .c-search__textArea {
-    width: 30%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .c-search__textArea {
-    width: 65%;
-  }
-}
-
-.c-search__icon {
-  color: #707070;
-}
-
-.c-search__button {
-  height: 30px;
-  width: 7vw;
-  border-radius: 5px;
-  border: 1px solid #707070;
-  font-size: 12px;
-  color: #707070;
-  background-color: #F2EDE9;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 960px) {
-  .c-search__button {
-    width: 15%;
   }
 }
 
@@ -571,6 +522,58 @@ archive.html -------------------------------------------------------
   margin: 12px 0 12px 14px;
   font-size: 1.5rem;
   color: #707070;
+}
+
+.p-search {
+  float: right;
+  margin-right: 5.0%;
+}
+
+@media screen and (max-width: 960px) {
+  .p-search {
+    margin-right: 0%;
+  }
+}
+
+.p-search__textArea {
+  width: 14vw;
+  height: 30px;
+  margin-right: 14px;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+@media screen and (max-width: 960px) {
+  .p-search__textArea {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-search__textArea {
+    width: 65%;
+  }
+}
+
+.p-search__icon {
+  color: #707070;
+}
+
+.p-search__button {
+  height: 30px;
+  width: 7vw;
+  border-radius: 5px;
+  border: 1px solid #707070;
+  font-size: 12px;
+  color: #707070;
+  background-color: #F2EDE9;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .p-search__button {
+    width: 15%;
+  }
 }
 
 .p-front-page-card {
