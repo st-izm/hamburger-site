@@ -162,7 +162,7 @@ ul {
   height: 150px;
   max-width: 100%;
   text-align: center;
-  background-image: url(../image/footer_image.png);
+  background-image: url("../image/footer_image.png");
   background-size: cover;
 }
 
@@ -465,7 +465,7 @@ ul {
 .p-mainVisual {
   width: 100%;
   line-height: 28vw;
-  background-image: url(../image/frontpage/frontpage_image.png);
+  background-image: url("../image/frontpage/frontpage_image.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -473,7 +473,7 @@ ul {
 .p-map {
   max-width: 100%;
   height: 500px;
-  background-image: url(../image/map_image.png);
+  background-image: url("../image/map_image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.6);
@@ -644,11 +644,11 @@ ul {
 }
 
 .p-front-page-card1 {
-  background-image: url(../image/frontpage/frontpage_card1.png);
+  background-image: url("../image/frontpage/frontpage_card1.png");
 }
 
 .p-front-page-card2 {
-  background-image: url(../image/frontpage/frontpage_card2.png);
+  background-image: url("../image/frontpage/frontpage_card2.png");
 }
 
 .p-front-page-card__explanation__text {
