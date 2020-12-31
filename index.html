@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="//use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <meta name="description" content="ページの内容を表す文章///ハンバーガー屋さんのサイトです" />
+    <title>Hamburger</title>
+</head>
+
+<body class="js-body">
+<div class="js-fade-layer js-close"></div> <!--サイドメニューopen時暗くするフェード  このフェードをクリックしてもnavは閉じる-->
+<main class="l-main">
+    <article class="l-main__left">
+        <!-- Header Start -->
+        <header class="l-header">
+            <h1 class="c-titles c-titles--header" href="#">Hamburger</h1>
+            <div class="p-search">
+                <input type="text" name="search" class="p-search__textArea" placeholder="&#xF002;" style="font-family:Arial, FontAwesome">
+                <input type="button" name="button" class="p-search__button" value="検索">
+            </div>
+            <button class="js-menu c-button--sideMenu">Menu</button>
+        </header>
+        <!-- Header  End-->
+
+        <div class="p-mainVisual">
+            <a class="c-titles--mainTop">ダミーサイト</a>
+        </div>
+        <section class="p-main-menu">
+            <ul class="l-main__front-page-contents">
+                <li class="p-front-page-card p-front-page-card1"> <!--TakeOut-->
+                    <div>
+                        <h3 class="c-titles c-titles--front-page-card">Take Out</h3>
+                        <hr>
+                    </div>
+                    <div class="p-frontpage-card__explanation">
+                        <div class="p-front-page-card__explanation__text">
+                            <dl>
+                                <dt>小見出しが入ります</dt>
+                                <dd>テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。</dd>
+                            </dl>
+                        </div>
+                        <div class="p-front-page-card__explanation__text">
+                            <dl>
+                                <dt>小見出しが入ります</dt>
+                                <dd>テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </li>
+                <li class="p-front-page-card p-front-page-card2"> <!--Eat In-->
+                    <div>
+                        <h3 class="c-titles c-titles--front-page-card">Eat In</h3>
+                        <hr>
+                    </div>
+                    <div class="p-frontpage-card__explanation">
+                        <div class="p-front-page-card__explanation__text">
+                            <dl>
+                                <dt>小見出しが入ります</dt>
+                                <dd>テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。</dd>
+                            </dl>
+                        </div>
+                        <div class="p-front-page-card__explanation__text">
+                            <dl>
+                                <dt>小見出しが入ります</dt>
+                                <dd>テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <div class="p-map">
+            <div class="p-map__description"> <!--gray parts-->
+                <div class="p-map__description__title">
+                    見出しが入ります
+                </div>
+                <hr>
+                <p class="p-map__description__text"> テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊
+                    ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキ
+                    ストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊りま
+                    す。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキスト
+                    が⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。
+                    テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊
+                    ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。テキストが⼊ります。</p>
+            </div>
+        </div>
+    </article>
+
+    <!--sideMenu (sidebar)-->
+    <div class="l-sideMenu">
+        <span class="js-close">×</span>
+        <h2 class="c-titles c-titles--menuTop">
+            Menu
+        </h2>
+        <nav class="p-menu">
+            <ul class="p-menu__food">
+                <li>
+                    <h3>バーガー</h3>
+                    <ul class="p-menu__food__items">
+                        <li>ハンバーガー</li>
+                        <li>チーズバーガー</li>
+                        <li>テリヤキバーガー</li>
+                        <li>アボカドバーガー</li>
+                        <li>フィッシュバーガー</li>
+                        <li>ベーコンバーガー</li>
+                        <li>チキンバーガー</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>サイド</h3>
+                    <ul class="p-menu__food__items">
+                        <li>ポテト</li>
+                        <li>サラダ</li>
+                        <li>ナゲット</li>
+                        <li>コーン</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>ドリンク</h3>
+                    <ul class="p-menu__food__items">
+                        <li>コーラ</li>
+                        <li>ファンタ</li>
+                        <li>オレンジ</li>
+                        <li>アップル</li>
+                        <li>紅茶（Ice/Hot）</li>
+                        <li>コーヒー（Ice/Hot）</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- sideMenu End -->
+</main>
+<!-- main End -->
+
+<!-- Footer  Start-->
+<footer class="l-footer">
+    <ul class="l-footer__sitemap">
+        <li><a href="#">ショップ情報</a></li>
+        <li>|</li>
+        <li><a href="#">ヒストリー</a></li>
+    </ul>
+    <small>Copyright: RaiseTech</small>
+</footer>
+<!-- Footer  End-->
+<script src="js/script.js"></script> <!--jQuery-->
+</body>
+</html>

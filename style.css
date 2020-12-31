@@ -1,0 +1,694 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* ボタンタグの装飾を消すための追記 */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*右側にはみ出した部分まで横スクロールバーが表示される問題を解消するための記述*/
+html {
+  overflow: auto;
+  font-size: 10px;
+}
+
+body {
+  overflow: hidden;
+}
+
+/*横スクロールバー問題解消ここまで*/
+img {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*
+共通レイアウトのヘッダー、サイドメニュー、フッターを先に記述し、
+続いてその他をhtmlファイル別に記述する。
+*/
+/* ------------------------------- */
+/* 全ページ共通レイアウトのカラー変数 */
+/* ------------------------------- */
+/* Main
+   ----------------------------------------------------------------- */
+/* Header
+   ----------------------------------------------------------------- */
+/* SideMenu
+   ----------------------------------------------------------------- */
+/* Footer
+   ----------------------------------------------------------------- */
+/* ------------------------------- */
+/* index.html                      */
+/* ------------------------------- */
+/* ------------------------------- */
+/* archive.html                    */
+/* ------------------------------- */
+.l-footer {
+  height: 150px;
+  max-width: 100%;
+  text-align: center;
+  background-image: url(../image/footer_image.png);
+  background-size: cover;
+}
+
+.l-footer__sitemap {
+  padding: 40px 0;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.l-footer__sitemap li {
+  font-size: 1.0rem;
+}
+
+.l-footer__sitemap a {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.l-footer small {
+  color: white;
+  font-size: .9rem;
+}
+
+.l-header {
+  position: relative;
+  height: 210px;
+  line-height: 210px;
+  width: 100%;
+  background-color: #FFF7EF;
+  display: inline-block;
+}
+
+@media screen and (max-width: 960px) {
+  .l-header {
+    height: 217px;
+    line-height: normal;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.l-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.l-main__left {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+
+@media screen and (max-width: 960px) {
+  .l-main__left {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.l-main__front-page-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .l-main__front-page-contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.js-fade-layer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  z-index: 9;
+}
+
+@media screen and (max-width: 960px) {
+  .js-fade-layer {
+    visibility: hidden;
+  }
+}
+
+.l-sideMenu {
+  position: relative;
+  width: 20%;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  /*footerの手前までsideMenuの領域を伸ばすため*/
+  padding-top: 82px;
+  padding-left: 3%;
+  padding-bottom: 300px;
+  background-color: #F2EDE9;
+}
+
+@media screen and (max-width: 960px) {
+  .l-sideMenu {
+    width: 350px;
+    height: 100vh;
+    padding-left: 5%;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    z-index: 10;
+    display: none;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .l-sideMenu {
+    width: 250px;
+  }
+}
+
+.l-sideMenu .js-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 5.0rem;
+  color: #707070;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .l-sideMenu .js-close {
+    display: block;
+  }
+}
+
+.l-sideMenu.is-open {
+  display: block;
+  right: 0px;
+  -webkit-animation: fadeIn 0.3s linear 0s;
+          animation: fadeIn 0.3s linear 0s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(350px);
+            transform: translateX(350px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(350px);
+            transform: translateX(350px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.c-button--sideMenu {
+  display: none;
+  position: fixed;
+  top: 18px;
+  right: 26px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #707070;
+  background-color: #FFF7EF;
+  border: solid 1px #bdb7b0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .c-button--sideMenu {
+    display: block;
+  }
+  .c-button--sideMenu:hover {
+    background-color: #ccc9c3;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-button--sideMenu {
+    font-size: 1.8rem;
+    top: 14px;
+    right: 15px;
+  }
+}
+
+.c-titles {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* Header
+   ----------------------------------------------------------------- */
+  /* SideMenu
+      ----------------------------------------------------------------- */
+  /* Main
+   ----------------------------------------------------------------- */
+}
+
+.c-titles--header {
+  margin-left: 4.0%;
+  float: left;
+  font-size: 6.5rem;
+  color: #707070;
+}
+
+@media screen and (max-width: 960px) {
+  .c-titles--header {
+    font-size: 5.3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-titles--header {
+    font-size: 4.0rem;
+  }
+}
+
+.c-titles--menuTop {
+  font-size: 3.3rem;
+  color: #707070;
+}
+
+@media screen and (max-width: 960px) {
+  .c-titles--menuTop {
+    display: none;
+  }
+}
+
+.c-titles--mainTop {
+  margin-left: 5%;
+  font-size: 3.0rem;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .c-titles--mainTop {
+    font-size: 2.0rem;
+  }
+}
+
+.c-titles--front-page-card {
+  margin: 3% 0 5% 5%;
+  font-size: 5.0rem;
+  color: white;
+}
+
+.c-titles--archiveTop {
+  margin-left: 5%;
+  font-size: 2.0rem;
+  color: white;
+}
+
+.c-titles--archiveTop span {
+  font-size: 3.0rem;
+  font-weight: bold;
+}
+
+.p-mainVisual {
+  width: 100%;
+  line-height: 28vw;
+  background-image: url(../image/frontpage/frontpage_image.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.p-map {
+  max-width: 100%;
+  height: 500px;
+  background-image: url(../image/map_image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 960px) {
+  .p-map {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-map {
+    height: 650px;
+  }
+}
+
+.p-map__description {
+  height: 100%;
+  width: 60%;
+  padding: 5% 8%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.p-map__description__title {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.p-map__description hr {
+  width: 6.0rem;
+  margin: 8% 0;
+  border-width: .2rem;
+  border-color: white;
+}
+
+.p-map__description__text {
+  font-size: 1.1rem;
+  line-height: 2.2rem;
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .p-map__description {
+    width: 100%;
+  }
+  .p-map__description hr {
+    margin: 3% 0;
+  }
+  .p-map__description p {
+    line-height: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-map__description {
+    height: 50%;
+  }
+}
+
+.p-menu {
+  list-style-type: none;
+}
+
+.p-menu__food li {
+  margin: 40px 0 40px 0;
+}
+
+.p-menu__food li h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #707070;
+}
+
+/* ＆で中に入れたら効かなかったので、別途下記している */
+.p-menu__food__items {
+  margin-top: 30px;
+}
+
+.p-menu__food__items li {
+  margin: 12px 0 12px 14px;
+  font-size: 1.5rem;
+  color: #707070;
+}
+
+.p-search {
+  float: right;
+  margin-right: 5.0%;
+}
+
+@media screen and (max-width: 960px) {
+  .p-search {
+    margin-right: 0%;
+  }
+}
+
+.p-search__textArea {
+  width: 14vw;
+  height: 30px;
+  margin-right: 14px;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+
+@media screen and (max-width: 960px) {
+  .p-search__textArea {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-search__textArea {
+    width: 65%;
+  }
+}
+
+.p-search__icon {
+  color: #707070;
+}
+
+.p-search__button {
+  height: 30px;
+  width: 7vw;
+  border-radius: 5px;
+  border: 1px solid #707070;
+  font-size: 12px;
+  color: #707070;
+  background-color: #F2EDE9;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .p-search__button {
+    width: 15%;
+  }
+}
+
+.p-front-page-card {
+  max-width: 47%;
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .p-front-page-card {
+    max-width: 100%;
+    height: 630px;
+    margin: 8px 0;
+  }
+}
+
+.p-front-page-card hr {
+  margin-left: 5%;
+  width: 10%;
+  border-width: .2rem;
+  border-color: white;
+}
+
+.p-front-page-card1 {
+  background-image: url(../image/frontpage/frontpage_card1.png);
+}
+
+.p-front-page-card2 {
+  background-image: url(../image/frontpage/frontpage_card2.png);
+}
+
+.p-front-page-card__explanation__text {
+  margin: auto auto 3% auto;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.p-front-page-card__explanation__text dl dt {
+  padding: 3%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3C2A10;
+}
+
+.p-front-page-card__explanation__text dl dd {
+  padding: 3%;
+  font-size: 1.5rem;
+  color: #3C2A10;
+}
+
+.p-archiveHeading {
+  width: 100%;
+  height: 283px;
+  line-height: 283px;
+  background-image: url(../image/archiveHeading_image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.p-archiveHeading__mask {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 600px) {
+  .p-archiveHeading {
+    height: 200px;
+    line-height: 200px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
