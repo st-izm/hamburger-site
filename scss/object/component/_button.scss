@@ -7,9 +7,16 @@
         font-size: 3.2rem;
         font-weight: bold;
         color: $gray;
+        background-color: #FFF7EF;
+        border: solid 1px #bdb7b0;
+        border-radius: 5px;
         cursor: pointer;
+
         @include tab {
         display: block;
+        &:hover {
+            background-color: #ccc9c3;
+        }
         }
         @include sp {
         font-size: 1.8rem;

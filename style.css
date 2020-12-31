@@ -137,25 +137,27 @@ ul {
   list-style-type: none;
 }
 
+/*
+共通レイアウトのヘッダー、サイドメニュー、フッターを先に記述し、
+続いてその他をhtmlファイル別に記述する。
+*/
+/* ------------------------------- */
+/* 全ページ共通レイアウトのカラー変数 */
+/* ------------------------------- */
+/* Main
+   ----------------------------------------------------------------- */
 /* Header
    ----------------------------------------------------------------- */
 /* SideMenu
    ----------------------------------------------------------------- */
-/* Main
-   ----------------------------------------------------------------- */
 /* Footer
    ----------------------------------------------------------------- */
-/*
-カラーを変数として一括定義している。
-共通レイアウトのヘッダー、サイドメニュー、フッターを先に記述し、
-続いてその他をhtmlファイル別に記述する。
-*/
-/*
-index.html -------------------------------------------------------
-*/
-/*
-archive.html -------------------------------------------------------
-*/
+/* ------------------------------- */
+/* index.html                      */
+/* ------------------------------- */
+/* ------------------------------- */
+/* archive.html                    */
+/* ------------------------------- */
 .l-footer {
   height: 150px;
   max-width: 100%;
@@ -267,8 +269,7 @@ archive.html -------------------------------------------------------
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: #000000;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
   z-index: 9;
 }
@@ -295,7 +296,7 @@ archive.html -------------------------------------------------------
 @media screen and (max-width: 960px) {
   .l-sideMenu {
     width: 350px;
-    height: 100%;
+    height: 100vh;
     padding-left: 5%;
     position: fixed;
     top: 0;
@@ -331,6 +332,34 @@ archive.html -------------------------------------------------------
 .l-sideMenu.is-open {
   display: block;
   right: 0px;
+  -webkit-animation: fadeIn 0.3s linear 0s;
+          animation: fadeIn 0.3s linear 0s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(350px);
+            transform: translateX(350px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(350px);
+            transform: translateX(350px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .c-button--sideMenu {
@@ -341,12 +370,18 @@ archive.html -------------------------------------------------------
   font-size: 3.2rem;
   font-weight: bold;
   color: #707070;
+  background-color: #FFF7EF;
+  border: solid 1px #bdb7b0;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {
   .c-button--sideMenu {
     display: block;
+  }
+  .c-button--sideMenu:hover {
+    background-color: #ccc9c3;
   }
 }
 

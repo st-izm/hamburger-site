@@ -9,7 +9,7 @@
 
     @include tab {
         width: 350px;
-        height: 100%; // 表示画面領域外に出た箇所をスクロール表示させるために、100%としている
+        height: 100vh; // 表示画面領域外に出た箇所をスクロール表示させるために、100vhとしている
         padding-left: 5%;
         position: fixed; // 表示画面領域外に出た場合スクロールさせるためのプロパティ
         top: 0;
@@ -36,5 +36,16 @@
     &.is-open {
         display: block;
         right: 0px;
+        animation: fadeIn 0.3s linear 0s;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(350px); //サイドバーをスライドさせる為の記述
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 }
