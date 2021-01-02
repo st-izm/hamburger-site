@@ -367,6 +367,7 @@ ul {
   position: fixed;
   top: 18px;
   right: 26px;
+  z-index: 9;
   font-size: 3.2rem;
   font-weight: bold;
   color: #707070;
@@ -390,6 +391,23 @@ ul {
     font-size: 1.8rem;
     top: 14px;
     right: 15px;
+  }
+}
+
+.c-button--archive-content-detail {
+  width: 40%;
+  height: 15%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  border-radius: 25px;
+  background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .c-button--archive-content-detail {
+    width: 60%;
+    padding: 9px;
+    margin: 20px auto;
   }
 }
 
@@ -452,14 +470,140 @@ ul {
 }
 
 .c-titles--archiveTop {
+  display: inline;
   margin-left: 5%;
-  font-size: 2.0rem;
+  font-size: 5.0rem;
   color: white;
 }
 
-.c-titles--archiveTop span {
-  font-size: 3.0rem;
+@media screen and (max-width: 960px) {
+  .c-titles--archiveTop {
+    font-size: 4.0rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-titles--archiveTop {
+    margin-top: 60px;
+    font-size: 2.2rem;
+    display: block;
+    line-height: normal;
+  }
+}
+
+.c-titles--archiveTop__search {
+  font-size: 2.8rem;
   font-weight: bold;
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .c-titles--archiveTop__search {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-titles--archiveTop__search {
+    margin-left: 5%;
+    font-size: 1.5rem;
+  }
+}
+
+.c-pager {
+  width: 80%;
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+  .c-pager {
+    width: 100%;
+    margin: 50px auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-pager {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 30px 0;
+  }
+}
+
+.c-pager p {
+  margin: 0 5px;
+  font-size: 1.3rem;
+  color: #707070;
+}
+
+.c-pager__fraction {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .c-pager__fraction {
+    display: none;
+  }
+}
+
+.c-pager__sp {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .c-pager__sp {
+    display: inline-block;
+  }
+}
+
+.c-pager ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.c-pager ul li {
+  padding: 10px;
+  margin: 0 6px;
+  font-size: 1.3rem;
+  color: #707070;
+  border: solid 2px #707070;
+}
+
+.c-pager ul li:first-child {
+  color: white;
+  background-color: #3C2B1C;
+}
+
+@media screen and (max-width: 960px) {
+  .c-pager ul li {
+    padding: 7px;
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-pager ul li {
+    display: none;
+  }
 }
 
 .p-mainVisual {
@@ -670,25 +814,231 @@ ul {
   color: #3C2A10;
 }
 
-.p-archiveHeading {
+.p-archive-mainVisual {
   width: 100%;
   height: 283px;
-  line-height: 283px;
-  background-image: url(../image/archiveHeading_image.png);
+  background-image: url("../../../image/archivepage/archiveTop_image.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
 }
 
-.p-archiveHeading__mask {
+.p-archive-mainVisual__mask {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 600px) {
-  .p-archiveHeading {
-    height: 200px;
-    line-height: 200px;
+  .p-archive-mainVisual__mask {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
+}
+
+@media screen and (max-width: 960px) {
+  .p-archive-mainVisual {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-archive-mainVisual {
+    height: 200px;
+  }
+}
+
+.p-archive {
+  width: 100%;
+  padding: 5% 5%;
+}
+
+.p-archive__top__title {
+  margin: 3% 0;
+  max-width: 1000px;
+  font-size: 3.0rem;
+  color: #3C2A10;
+}
+
+@media screen and (max-width: 960px) {
+  .p-archive__top__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-archive__top__title {
+    font-size: 2.0rem;
+  }
+}
+
+.p-archive__top__description {
+  margin-bottom: 30px;
+  max-width: 1000px;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+
+@media screen and (max-width: 960px) {
+  .p-archive__top__description {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-archive__top__description {
+    margin-bottom: 15px;
+    font-size: 1.0rem;
+    line-height: 1.5rem;
+  }
+}
+
+.p-archive__article ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.p-archive__article__contents {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  min-height: 200px;
+  margin: 10px auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #3C2B1C;
+}
+
+@media screen and (max-width: 600px) {
+  .p-archive__article__contents {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 400px;
+  }
+}
+
+.p-archive__article__contents__image {
+  width: 100%;
+  text-align: center;
+}
+
+.p-archive__article__contents__image img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 960px) {
+  .p-archive__article__contents__image img {
+    width: auto;
+    max-height: 250px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-archive__article__contents__image img {
+    width: 100%;
+    max-width: 400px;
+    max-height: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .p-archive__article__contents__image {
+    width: auto;
+    overflow: hidden;
+  }
+}
+
+.p-archive__article__contents__description {
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .p-archive__article__contents__description {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-archive__article__contents__description {
+    width: 100%;
+  }
+}
+
+.p-archive__article__contents__description h3 {
+  font-size: 2.1rem;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 960px) {
+  .p-archive__article__contents__description h3 {
+    font-size: 1.8rem;
+  }
+}
+
+.p-archive__article__contents__description dl dt {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 960px) {
+  .p-archive__article__contents__description dl dt {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-archive__article__contents__description dl dt {
+    margin: 20px 0;
+  }
+}
+
+.p-archive__article__contents__description dl dd {
+  font-size: 1.0rem;
+  line-height: 1.4rem;
 }
 /*# sourceMappingURL=style.css.map */

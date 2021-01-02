@@ -27,7 +27,7 @@
 
 @import "scss/object/component/_button";
 @import "scss/object/component/_titles";
-// @import "object/component/_media";
+@import "scss/object/component/_pager";
 
 // -----------------------------------------------------------------
 // Project
@@ -45,7 +45,8 @@
 
 // -----------------------------------------------------------------
 // archive
-@import "scss/object/project/archive/_archiveHeading";
+@import "scss/object/project/archive/_archive-mainVisual";
+@import "scss/object/project/archive/_archive";
 
 // -----------------------------------------------------------------
 // Utility
